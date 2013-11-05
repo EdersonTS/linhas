@@ -1,0 +1,10 @@
+HP Pavilion - Login screen brightness off
+
+open
+# /etc/default/grup
+
+change
+# GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi_osi=Linux acpi_backlight=vendor splash"
+
+run
+# update-grup
