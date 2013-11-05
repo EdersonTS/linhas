@@ -8,3 +8,5 @@ change
 
 run
 # update-grup
+
+Source: http://askubuntu.com/a/95787/203253
