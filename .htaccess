@@ -1,0 +1,100 @@
+
+DefaultLanguage     pt-BR
+AddDefaultCharset   UTF-8
+ServerSignature     Off
+
+<IfModule mod_mime.c>
+  AddType application/vnd.ms-fontobject .eot
+  AddType font/ttf                      .ttf
+  AddType font/truetype                 .ttf
+  AddType application/x-font-ttf        .ttf
+  AddType font/otf                      .otf
+  AddType font/opentype                 .otf
+  AddType application/font-woff         .woff
+  AddType text/x-component              .htc
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive    On
+  ExpiresDefault   A0
+  Header set Cache-Control "public, must-revalidate"
+
+  ExpiresByType image/*                       A31536000
+  ExpiresByType application/javascript        A31536000
+  ExpiresByType application/x-javascript      A31536000
+  ExpiresByType text/javascript               A31536000
+  ExpiresByType text/css                      A31536000
+  ExpiresByType application/x-shockwave-flash A31536000
+  ExpiresByType application/vnd.ms-fontobject A31536000
+  ExpiresByType font/ttf                      A31536000
+  ExpiresByType font/truetype                 A31536000
+  ExpiresByType application/x-font-ttf        A31536000
+  ExpiresByType font/otf                      A31536000
+  ExpiresByType font/opentype                 A31536000
+  ExpiresByType application/font-woff         A31536000
+  ExpiresByType text/x-component              A31536000
+</IfModule>
+
+<FilesMatch "\.(htaccess|psd|mwb|cdr|fla)$">
+  Deny from all
+</FilesMatch>
+
+<IfDefine DevServer>
+  <IfModule mod_autoindex.c>
+    Options +Indexes
+  </IfModule>
+</IfDefine>
+<IfDefine !DevServer>
+  <IfModule mod_autoindex.c>
+    Options -Indexes
+  </IfModule>
+</IfDefine>
+
+
+<ifModule mod_gzip.c>
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file \.(html?|txt|css|js|php|pl)$
+  mod_gzip_item_include handler ^cgi-script$
+  mod_gzip_item_include mime ^text/.*
+  mod_gzip_item_include mime ^application/x-javascript.*
+  mod_gzip_item_exclude mime ^image/.*
+</ifModule>
+
+
+<IfModule mod_deflate.c>
+  AddOutputFilter DEFLATE js css
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+
+  #The following lines are to avoid bugs with some browsers
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</ifModule>
+
+
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+#  RewriteBase /
+
+  RewriteRule ^favicon\.ico$ libs/imgs/favicon.png
+
+  # tricks to 'by pass' cache force browser to see "style.1.css" but load "style.css" updated
+  RewriteRule ^libs\.[0-9]{1,}(.*)    libs/$1
+  RewriteRule ^(.*)\.[0-9]{1,}\.css$  $1.css
+  RewriteRule ^(.*)\.[0-9]{1,}\.js$   $1.js
+  RewriteRule ^(.*)\.[0-9]{1,}\.png$  $1.png
+  RewriteRule ^(.*)\.[0-9]{1,}\.jpg$  $1.jpg
+
+  RewriteCond $1 !^(index\.php|libs|uploads)
+  RewriteRule ^(.*)$ index.php?/$1 [L]
+</IfModule>
