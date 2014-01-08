@@ -1,3 +1,6 @@
+# -------------------------------------------------
+# http://xpt.sourceforge.net/techdocs/nix/conn/ssh/ssh04-SshAndX/single/
+
 #Asssuming you did
 ssh -X user@hostname
 
@@ -6,3 +9,5 @@ sudo su
 
 # and merge the Xauth information like this:
 xauth merge /home/user/.Xauthority
+
+# -------------------------------------------------
