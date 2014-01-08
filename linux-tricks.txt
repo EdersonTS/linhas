@@ -1,0 +1,8 @@
+#Asssuming you did
+ssh -X user@hostname
+
+# Gain root privileges,
+sudo su
+
+# and merge the Xauth information like this:
+xauth merge /home/user/.Xauthority
