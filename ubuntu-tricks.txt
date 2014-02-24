@@ -10,3 +10,13 @@ run
 # update-grup
 
 Source: http://askubuntu.com/a/95787/203253
+
+
+
+//----------------------------------------------------------------
+
+Dropbox issue on Ubuntu / Linux Mint
+http://www.mail-archive.com/debian-bugs-dist@lists.debian.org/msg1183618.html
+
+# sudo rm -rf /var/lib/dropbox/.dropbox-dist
+# dropbox start -i
