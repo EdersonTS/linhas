@@ -14,7 +14,6 @@ Source: http://askubuntu.com/a/95787/203253
 
 
 //----------------------------------------------------------------
-
 Dropbox issue on Ubuntu / Linux Mint
 http://www.mail-archive.com/debian-bugs-dist@lists.debian.org/msg1183618.html
 
@@ -23,7 +22,14 @@ http://www.mail-archive.com/debian-bugs-dist@lists.debian.org/msg1183618.html
 
 
 //----------------------------------------------------------------
-
 Generate MD5 as a name of files
 
 # for i in *; do MD5=$(echo $i | md5sum | cut -d' ' -f1); mv "./$i" $MD5.${i##*.}; done
+
+
+//----------------------------------------------------------------
+Rename files using SED and REGEX
+Changin pipes by minus in filenames
+
+# for a in *.mp3; do NAME=$(echo $a | sed 's:|:-:g'); mv "./$a" "$NAME"; done
+
