@@ -1,4 +1,5 @@
 #!/bin/sh
+# DEFAULT PATH /usr/bin/xdg-open
 #---------------------------------------------
 #   xdg-open
 #
