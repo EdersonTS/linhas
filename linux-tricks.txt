@@ -49,3 +49,10 @@ Rename files using SED and REGEX
 Changin pipes by minus in filenames
 
 # for a in *.mp3; do NAME=$(echo $a | sed 's:|:-:g'); mv "./$a" "$NAME"; done
+
+
+
+//----------------------------------------------------------------
+Restore background on Ubuntu (was blank for me after upgrading)
+
+# gsettings set org.gnome.settings-daemon.plugins.background active true 
