@@ -1,5 +1,5 @@
 //----------------------------------------------------------------
-// http://xpt.sourceforge.net/techdocs/nix/conn/ssh/ssh04-SshAndX/single/
+General - Geting window from remote machine via SSH
 
 Asssuming you did
 # ssh -X user@hostname
@@ -10,9 +10,13 @@ Gain root privileges,
 and merge the Xauth information like this:
 # xauth merge /home/user/.Xauthority
 
+Source: http://xpt.sourceforge.net/techdocs/nix/conn/ssh/ssh04-SshAndX/single/
+
+
 
 
 //----------------------------------------------------------------
+Ubuntu - Laptop HP
 HP Pavilion - Login screen brightness off
 
 open
@@ -29,7 +33,7 @@ Source: http://askubuntu.com/a/95787/203253
 
 
 //----------------------------------------------------------------
-Dropbox issue on Ubuntu / Linux Mint
+Ubuntu - Dropbox issue
 http://www.mail-archive.com/debian-bugs-dist@lists.debian.org/msg1183618.html
 
 # sudo rm -rf /var/lib/dropbox/.dropbox-dist
@@ -38,6 +42,7 @@ http://www.mail-archive.com/debian-bugs-dist@lists.debian.org/msg1183618.html
 
 
 //----------------------------------------------------------------
+Shell
 Generate MD5 as a name of files
 
 # for i in *; do MD5=$(echo $i | md5sum | cut -d' ' -f1); mv "./$i" $MD5.${i##*.}; done
@@ -53,6 +58,7 @@ Changin pipes by minus in filenames
 
 
 //----------------------------------------------------------------
+Ubuntu
 Restore background on Ubuntu (was blank for me after upgrading)
 
 # gsettings set org.gnome.settings-daemon.plugins.background active true 
@@ -60,9 +66,21 @@ Restore background on Ubuntu (was blank for me after upgrading)
 
 
 //----------------------------------------------------------------
-no talloc stackframe at ../source3/param/loadparm.c:4864, leaking memory
+Ubuntu 14.04 - Issue
+"no talloc stackframe at ../source3/param/loadparm.c:4864, leaking memory"
 
 Rum "pam-auth-update" and remove "SMB password synchronization"
 
 By: http://ubuntuforums.org/showthread.php?t=2214042#post_12995103
 Source: https://bugs.launchpad.net/ubuntu/+source/samba/+bug/1257186
+
+
+
+//----------------------------------------------------------------
+Ubuntu - Unity
+Advanced configs for Unity | Compiz
+
+# apt-get instal compizconfig-settings-manager
+
+Manage it carefully
+
