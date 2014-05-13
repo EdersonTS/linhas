@@ -69,7 +69,9 @@ Restore background on Ubuntu (was blank for me after upgrading)
 Ubuntu 14.04 - Issue
 "no talloc stackframe at ../source3/param/loadparm.c:4864, leaking memory"
 
-Rum "pam-auth-update" and remove "SMB password synchronization"
+# pam-auth-update
+
+and remove "SMB password synchronization"
 
 By: http://ubuntuforums.org/showthread.php?t=2214042#post_12995103
 Source: https://bugs.launchpad.net/ubuntu/+source/samba/+bug/1257186
@@ -83,4 +85,18 @@ Advanced configs for Unity | Compiz
 # apt-get instal compizconfig-settings-manager
 
 Manage it carefully
+
+
+
+//----------------------------------------------------------------
+Ubuntu
+update-initramfs: Generating /boot/initrd.img-3.11.0-18-generic
+Warning: No support for locale: pt_BR.utf8
+
+# dpkg-reconfigure locales
+# update-locale LANG=pt_BR.UTF-8
+# locale-gen --purge --no-archive
+# update-initramfs -u -k all
+
+Source: http://www.x-fish.org/blog/1209101/Linux:_Warning:_No_Support_for_locale:_de_DE.utf8/
 
