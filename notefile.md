@@ -5,6 +5,7 @@ git config core.fileMode false
 
 
 git config receive.denyCurrentBranch ignore
+
 hooks: post-receive
 
 
