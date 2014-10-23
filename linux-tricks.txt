@@ -127,3 +127,16 @@ By: http://stackoverflow.com/questions/14241691/linux-rename-command-uppercase-f
 More: http://perldoc.perl.org/perlretut.html
 More: http://www.troubleshooters.com/codecorn/littperl/perlreg.htm
 
+
+
+//----------------------------------------------------------------
+Common
+Change string inside file
+
+Here I'll change a bunch of PHP Class Names to their respective file names
+
+Converte first letter of file to UpperCase
+# for file in *.php; do n=${file^}; n=${n%.php}; sed "s/eeeeeeee/$n/" $file > "$file.1"; rm $file; mv "./$file.1" "./$file" ; done
+
+More: http://stackoverflow.com/questions/12468173/change-lowercase-file-names-to-uppercase-with-awk-sed-or-bash/12468237#12468237
+
