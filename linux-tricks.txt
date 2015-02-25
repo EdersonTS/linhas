@@ -140,3 +140,16 @@ Converte first letter of file to UpperCase
 
 More: http://stackoverflow.com/questions/12468173/change-lowercase-file-names-to-uppercase-with-awk-sed-or-bash/12468237#12468237
 
+
+
+//----------------------------------------------------------------
+WebDev
+Creating SITEMAPs with `wget`
+
+# wget --spider --recursive --no-verbose --output-file=wgetlog.txt http://somewebsite.com
+# sed -n "s@.\+ URL:\([^ ]\+\) .\+@\1@p" wgetlog.txt | sed "s@&@\&amp;@" > sedlog.txt
+
+By: http://stackoverflow.com/questions/3948947/can-i-use-wget-to-generate-a-sitemap-of-a-website-given-its-url/6747761#6747761
+
+
+
