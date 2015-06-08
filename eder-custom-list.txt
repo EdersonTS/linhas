@@ -1,0 +1,8 @@
+@@||erechim.byll.com.br/$document
+@@||awardspace.com/$document
+@@||caixa.gov.br/$document
+##div.mclics
+##div.section_google-adsense
+###vitrine_buscape
+##.pub-banner
+
