@@ -12,4 +12,7 @@
 ##div.section_google-adsense
 ###vitrine_buscape
 ##.pub-banner
-
+###sky-right
+###sky-center
+###sky-banner
+##script[src~="ads"]
