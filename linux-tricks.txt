@@ -153,3 +153,13 @@ By: http://stackoverflow.com/questions/3948947/can-i-use-wget-to-generate-a-site
 
 
 
+//----------------------------------------------------------------
+Converting
+Animated .GIF to video .AVI
+
+# ffmpeg -r 10 -i animation.gif animation.avi
+
+By: http://www.linuxquestions.org/questions/linux-software-2/converting-animated-gif-to-avi-ffmpeg-549839/#post2729701
+
+
+
