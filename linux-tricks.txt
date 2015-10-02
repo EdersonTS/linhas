@@ -46,6 +46,8 @@ Shell
 Generate MD5 as a name of files
 
 # for i in *; do MD5=$(echo $i | md5sum | cut -d' ' -f1); mv "./$i" $MD5.${i##*.}; done
+// -------
+# md5sum * | while read -r sum filename; do mv -v "$filename" "$sum"; done
 
 
 
