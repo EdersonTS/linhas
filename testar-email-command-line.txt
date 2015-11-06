@@ -37,4 +37,14 @@ o comando inserido, assim podem ser inseridos diversos comandos
 ao servidor e identificar a resposta pela `flag` que precede a 
 resposta
 
+
 SMTP commands:
+
+
+
+Como testar se o filtro de SPAM está *ligado*: 
+https://en.wikipedia.org/wiki/GTUBE
+
+Um artigo exemplificando como utiliar a linha de comando para acessar/enviar emails:
+https://mediatemple.net/community/products/dv/204404584/sending-or-viewing-emails-using-telnet
+
