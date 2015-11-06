@@ -10,6 +10,7 @@ Netcat
   # nc pop3.domain.com 110
   # nc smtp.domain.com 587
 
+
 POP commands:
   USER uid           Log in as "uid"
   PASS password      Substitue "password" for your actual password
@@ -20,5 +21,20 @@ POP commands:
   RSET               Undo any changes
   QUIT               Logout (expunges messages if no RSET)
   TOP msg n          Show first n lines of message number msg
+
+
+IMAP commands:
+	LOGIN [username] [password]
+	LIST [flags] [folder separator] [search term]
+	STATUS [mailbox] [flags]
+	SELECT [mailbox]
+	FETCH [first]:[last] flags
+	FETCH [mail number] body[header]
+	FETCH [mail number] body[text]
+	LOGOUT
+Para funcionar corretamente deve inserir uma `flag` identificando
+o comando inserido, assim podem ser inseridos diversos comandos
+ao servidor e identificar a resposta pela `flag` que precede a 
+resposta
 
 SMTP commands:
