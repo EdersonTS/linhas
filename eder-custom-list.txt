@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Version: 2015060812
 ! Title: Éderson's Annoyance List
-! Last modified: 08 Jun 2015 12:00 UTC
+! Last modified: 07 Jun 2018 19:42 UTC
 ! License: http://creativecommons.org/licenses/by/3.0/
 !
 !--------------------------General blocking rules-----------------------------!
