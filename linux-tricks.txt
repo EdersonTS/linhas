@@ -165,3 +165,33 @@ By: http://www.linuxquestions.org/questions/linux-software-2/converting-animated
 
 
 
+//----------------------------------------------------------------
+Converting
+All WAV files into MP3 using FFMPEG Tool
+
+# for i in *.wav; do ffmpeg -i "./$i" "${i%wav}mp3"; done;
+
+By: http://linuxpoison.blogspot.com.br/2008/02/script-to-convert-wav-to-mp3.html
+
+
+
+//----------------------------------------------------------------
+Converting
+All WAV files into MP3 using LAME Tool
+
+# for i in *.wav; do lame -h -b 192 "./$i" "${i%wav}mp3"; done;
+
+By: http://linuxpoison.blogspot.com.br/2008/02/script-to-convert-wav-to-mp3.html
+
+
+
+//----------------------------------------------------------------
+Converting
+All files to UTF-8 using VIM
+
+# sudo vim +"argdo set nobomb | set fileencoding=utf-8 | w" $(find . -type f -name "*.php")
+
+By: http://stackoverflow.com/questions/2311750/change-file-encoding-to-utf-8-via-vim-in-a-script#2311821
+
+
+
