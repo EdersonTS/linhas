@@ -5,9 +5,16 @@
 ! License: http://creativecommons.org/licenses/by/3.0/
 !
 !--------------------------General blocking rules-----------------------------!
-@@||erechim.byll.com.br/$document
+@@||*.byll.com.br/$document
 @@||awardspace.com/$document
-@@||caixa.gov.br/$document
+
+@@||*.admin.mailchimp.com^$document
+@@||duckduckgo.com^$document
+@@||*.fazenda.gov.br^$document
+@@||*.caixa.gov.br/$document
+@@||nic.top^$document
+@@||santandernet.com.br^$document
+
 ##div.mclics
 ##div.section_google-adsense
 ###vitrine_buscape
