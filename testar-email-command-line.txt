@@ -39,7 +39,18 @@ resposta
 
 
 SMTP commands:
+	EHLO <your mail server domain>
+	AUTH LOGIN
+	Enter your user name in base 64
+	Enter your password in base 64
+	MAIL FROM:<sender@domain.com>
+	RCPT TO:<recipient@remotedomain.com>
+	DATA
+	type the data message (include some headers as subject)
+	.
 
+Como testar smtp:
+https://technet.microsoft.com/en-us/library/aa995718(v=exchg.65).aspx
 
 
 Como testar se o filtro de SPAM está *ligado*: 
